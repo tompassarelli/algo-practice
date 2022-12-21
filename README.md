@@ -1,1 +1,1 @@
-a container for a collection of js/react based puzzles
+todo: add jest to project
