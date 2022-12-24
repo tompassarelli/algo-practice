@@ -39,12 +39,12 @@ class Stack {
         }
         // save reference to first node (the node will be "popped") because we will
         // need to dereference it as relates to the "remove" part of the "pop" procedure
-        let oldNode = this.first
+        let poppedNode = this.first
         // remove part: dereference this.first and reset to next in list
         this.first = this.first.next
         this.size--
         // return part: return the removed node's value
-        return oldNode.value
+        return poppedNode.value
     }
 }
 
