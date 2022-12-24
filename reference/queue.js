@@ -20,7 +20,7 @@ class Queue {
         this.first = newNode
         this.last = newNode
       } else {
-        // change the .next on leader node to point to enqueued node
+        // change the .next on head node to point to enqueued node
         // when we shift leader, we can take its .next and set that to `first`
         this.last.next = newNode
         // last here represents the last element to be processed by the queue
@@ -52,11 +52,12 @@ class Queue {
 
 const q = new Queue
 
-stck.push(2)
-stck.push(1)
+q.enqueue(1)
+q.enqueue(2)
 
 console.log(q.first) 
 console.log(q.last) 
 console.log(q.size) 
 
-console.log(q.pop())
+
+console.log(q.dequeue())

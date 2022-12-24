@@ -1,1 +1,4 @@
+all files can be easily examined with quokka
+
 https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/
+https://austinhenley.com/blog/challengingalgorithms.html
