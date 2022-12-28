@@ -28,14 +28,14 @@ class Queue {
       }
       this.size++
     }
-    // dequeue is basically arr.shift(), shift element out of queue
     dequeue(){
         // we can only pop if the list contains an element, so just return null if empty list
         if(!this.first) {
           return null
         }
-        // if we are shifting the last element, this.first==this.last.
-        // we need to set last to null when we no elements exist (as the case when we initalized)
+        // if we happen to be shifting the last element, this.first==this.last.
+        // in this case we need to set last to null when we no elements exist 
+        // (such as what we do when we initalize)
         if(this.first === this.last){
           this.last = null
         }
