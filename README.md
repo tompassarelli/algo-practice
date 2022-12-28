@@ -1,1 +1,1 @@
-todo: add jest to project
+TODO [x] add ~jest~ chai to project
