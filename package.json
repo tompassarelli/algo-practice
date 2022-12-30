@@ -1,10 +1,12 @@
 {
   "name": "algo-practice",
   "version": "1.0.0",
-  "description": "todo: add jest to project",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test-all": "mocha tests",
+    "test": "node npm-scripts/test.js",
+    "_test": "only test 1..n files. invoke as `npm test file1 file2`"
   },
   "repository": {
     "type": "git",
@@ -18,8 +20,10 @@
   },
   "homepage": "https://github.com/tompassarelli/algo-practice#readme",
   "dependencies": {
+    "@types/node": "^18.11.18",
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
+    "node": "^19.3.0",
     "nyc": "^15.1.0"
   }
 }

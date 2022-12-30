@@ -1,15 +1,20 @@
-class Node {
-    constructor() {
-    }
+class StackNode {
+  constructor() {
+  }
 }
 
 class Stack {
-    constructor(){
-    }
-    push(){
-    }
-    pop(){
-    }
+  constructor(){
+  }
+  push(){
+  }
+  pop(){
+  }
+  peek() {
+  }
 }
 
-const stck = new Stack
+module.exports = {
+  StackNode: StackNode,
+  Stack: Stack
+}
