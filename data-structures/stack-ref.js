@@ -1,7 +1,7 @@
 class StackNode {
   constructor(val) {
     this.value = val
-    this.next = null // null < n1 < n2 < ..
+    this.next = null // null < n1 < n2 < makes it efficient when we pop n2 to get n1
   }
 }
 
@@ -30,22 +30,20 @@ class Stack {
     // ** keep a reference to the node we will be popping (tail) 
     // because we will lose it when we update tail to be tail.next **
     let nodeToPop = this.tail;
-    
-    // ** update tail **
-    // new tail is going to be second the last node in list (tail node.next)
-    this.tail = this.tail.next; 
-    
-    // ** update head conditionally **
-    // if we are popping the head, ensure we clean up that reference  
-    if (this.head == nodeToPop) {
-      this.head = null
-    }
 
-    // ** update size before popping **
-    // only reference remaining to old tail is nodeToPop, and after function ends
-    // we will have no more references to old tail. So update size. 
+    // ** clear tail/head conditionally **
+    // if size == 1, we are popping the last element, and no references should remain
+    if (this.size == 1) {
+      this.head = null
+      this.tail = null
+      this.size--
+      return nodeToPop.value 
+    }
+    
+    // ** default case: update tail by pointing this.tail to next (this.tail.next)**
+    this.tail = this.tail.next; 
     this.size--
-    // finally, we return the nodeToPop.value (containing perhaps int, str, obj)
+    // finally, we return the nodeToPop.value
     return nodeToPop.value
   }
   peek() {
