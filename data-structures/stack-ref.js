@@ -23,7 +23,7 @@ class Stack {
     this.size++
   }
   pop(){
-    // we can't pop if there are no elements in the list, it we do so, return null
+    // we can't pop if there are no elements in the list, if we do so, return null
     if (this.head == null) {
       return null
     }
@@ -39,8 +39,7 @@ class Stack {
       this.size--
       return nodeToPop.value 
     }
-    
-    // ** default case: update tail by pointing this.tail to next (this.tail.next)**
+    // otherwise proceed to update to tail to tail.next (dereferencing current tail) 
     this.tail = this.tail.next; 
     this.size--
     // finally, we return the nodeToPop.value
